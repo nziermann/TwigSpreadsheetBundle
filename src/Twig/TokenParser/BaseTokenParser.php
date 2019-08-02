@@ -116,7 +116,7 @@ abstract class BaseTokenParser extends \Twig_TokenParser
                 switch ($parameterOptions['type']) {
                     case self::PARAMETER_TYPE_ARRAY:
                         // check if expression is valid array
-                        $valid = $expression instanceof \Twig_Node_Expression_Array;
+                        $valid = $expression instanceof \Twig_Node_Expression_Array || $expression instanceof \Twig_Node_Expression_Name;
                         break;
                     case self::PARAMETER_TYPE_VALUE:
                         // check if expression is valid value
